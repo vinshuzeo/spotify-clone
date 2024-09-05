@@ -1,0 +1,52 @@
+.border{
+    border: 2px solid red ;
+    margin: 3px;
+}
+.flex{
+   display: flex;
+}
+.justify-center{
+   justify-content: center;
+}
+.items-center{
+   align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.invert{
+    filter: invert(1)
+}
+.bg-grey{
+    background-color: #1c1c1c;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 10px;
+}
+/* Dark-themed scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;               /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c;       /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a; /* Color of the scrollbar thumb */
+    border-radius: 10px;       /* Rounded corners for the scrollbar thumb */
+    border: 2px solid #2c2c2c; /* Border around the thumb, matching the track color */
+}
+
+/* Dark-themed scrollbar for Firefox */
+scrollbar-color: #4a4a4a #2c2c2c; /* Thumb color and track color */
+scrollbar-width: thin;            /* Thinner scrollbar width */

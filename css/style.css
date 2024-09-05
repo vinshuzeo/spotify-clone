@@ -1,0 +1,572 @@
+ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.close{
+    display: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.left {
+    width: 26vw;
+    padding: 16px 23px;
+}
+.left
+{
+    position: absolute;
+    left: -250%;
+}
+
+.right {
+    width: 75vw;
+    margin: 16px 0;;
+}
+
+.home {
+    padding: 10px;
+}
+
+.home ul li {
+    display: flex;
+    gap: 15px;
+    width: 15px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    width: 24px;
+    padding-top: 14px;
+    font-weight: bold;
+    padding: 23px 14px;
+    white-space: nowrap;
+    margin: -10px;
+    font-size: 13px;
+    height: 24px;
+    align-items: center;
+    color: #fff;
+}
+
+.heading img {
+    width: 30px;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 7px;
+
+}
+
+
+
+.footer a span {
+    font-size: 7px;
+    /* Makes the font smaller */
+    color: rgba(236, 236, 242, 0.632);
+    /* Keeps the text color blue */
+    text-decoration: none;
+    /* Optional: Removes underline */
+}
+
+.footer a {
+    text-decoration: none;
+    /* Optional: Removes underline from the link */
+}
+
+.right {
+    margin: 0px;
+    position: relative;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    background-color: #000;
+    margin-top: 8px;
+}
+
+.header * {
+    padding: 2px;
+}
+
+.spotifyPlaylists {
+    padding: 16px;
+    font-size: 12px;
+}
+.spotifyPlaylists h1{
+    padding: 16px;
+}
+.cardContainer {
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-bottom: 44px;
+}
+.card {
+    width: 174px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    position: relative;
+    transition: all .9s;
+    overflow: hidden;
+}
+.card:hover{
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+    --a: 1;
+}
+.card:hover .play{
+     opacity: 1;
+     top: 150px;
+}
+.card>* {
+    padding-top: 5px;
+}
+
+.card img {
+    width: 172px;
+    /* Reduce the image size */
+    border-radius: 17px;
+    top: 0;
+    left: 0;
+    height: 172px;
+    object-fit: contain;
+}
+.play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 205px;
+    right: 15px;
+    opacity: 0;
+    transition: all 0.05s ease-out;
+}
+
+.nav {
+    margin-top: 8px;
+    margin-left: 12px;
+    display: flex;
+    gap: 14px;
+}
+
+
+
+.spotifyPlaylists {
+    margin-left: -1px;
+    background-color: #1c1c1c;
+    /* Adjust the value as needed */
+}
+
+.buttons>* {
+    margin: 0 14px;
+}
+
+.signupbtn {
+    background-color: rgb(0 0 0);
+    ;
+    color: rgb(183, 178, 178);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signupbtn:hover {
+    font-size: 1.1rem;
+    color: white;
+}
+
+
+
+.loginbtn {
+    background-color: white;
+    border-radius: 40px;
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    width: 112px;
+    height: 51px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    font-weight: 700;
+    width: 114px;
+    height: 53px;
+    cursor: pointer
+}
+
+.playbar {
+    position: fixed;
+    bottom: 4px;
+    background-color: rgb(234, 240, 234);
+    width: 93%;
+    padding: 0px;
+    width: 72vw;
+    margin-left: -6px;
+    height: 6.3%;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.hamburgerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.info div{
+    word-break: break-all;
+}
+.songList ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #444;
+    margin-bottom: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.song-item img.invert {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    margin-right: 10px;
+}
+.song-item .info {
+    display: flex;
+    flex-direction: column;
+    flex: 2; /* Adjusts how much space the info block takes */
+}
+
+.song-item .song-title {
+    font-weight: bold;
+}
+
+.song-item .song-artist {
+    font-size: 0.9em;
+    color: #aaa;
+}
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.playnow img.invert {
+    height: 20px;
+    width: 20px;
+    filter: invert(100%);
+}
+
+.playnow span {
+    margin-top: -2px;
+    font-size: 13px;
+    width: 55px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+.song-list-container {
+    max-height: 500px;  /* Set the maximum height of the container */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    margin-bottom: 44px;
+}
+.songbuttons img[src="nextsong.svg"] {
+    margin-left: -5px; /* Adjust the value as needed to move the button slightly to the left */
+}
+.seekbar{
+    height: 0px;
+    width: 99%;
+    border: 1.43px solid black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    left: 6px;
+}
+.circle{
+    width: 11.5px;
+    height: 11.5px;
+    border-radius: 13px;
+    background: black;
+    position: relative;
+    bottom: 6.5px;
+    margin-left: -7px;
+    transition: left 0.5s; 
+}
+.songbuttons img{
+    cursor:pointer; 
+}
+.timevol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.songtime{
+    
+    position: absolute;
+    bottom: 10%;
+    color: black;
+    font-size: 107%;
+    padding: 0.5rem;
+    width: 1%;
+}
+.songinfo{
+    position: absolute;
+    left: 1vw;
+    bottom: 33%;
+    font-size: 106%;
+    color: black;
+}
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+.volume-control {
+    width: 60%; /* Keep the width as specified */
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    -moz-appearance: none; /* Remove default styling for Firefox */
+    appearance: none; /* Remove default styling for all browsers */
+    background: linear-gradient(to right, #000000 50%, #ffffff 50%); /* Initial gradient with inverted colors */
+    border-radius: 5px; /* Rounded corners for the track */
+    height: 2px; /* Thinner track height */
+    outline: none; /* Remove outline */
+    position: relative; /* Needed for webkit browsers */
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+/* Make track background transparent */
+.volume-control::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px; /* Thinner track thickness */
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.volume-control::-moz-range-track {
+    width: 100%;
+    height: 2px; /* Thinner track thickness */
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.volume-control::-ms-track {
+    width: 100%;
+    height: 2px; /* Thinner track thickness */
+    border-radius: 5px;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
+/* Thumb (the draggable part) */
+.volume-control::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    width: 10px; /* Smaller thumb width */
+    height: 10px; /* Smaller thumb height */
+    background-color: rgb(0, 0, 0); /* Thumb color to be white initially */
+    border-radius: 50%; /* Make thumb a circle */
+    cursor: pointer;
+    margin-top: -4px; /* Align the thumb vertically with the track */
+    position: relative; /* Needed for webkit browsers */
+    z-index: 1; /* Make sure the thumb is on top */
+}
+
+.volume-control::-moz-range-thumb {
+    width: 10px; /* Smaller thumb width */
+    height: 10px; /* Smaller thumb height */
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-control::-ms-thumb {
+    width: 10px; /* Smaller thumb width */
+    height: 10px; /* Smaller thumb height */
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Hide the fill */
+.volume-control::-ms-fill-lower {
+    background: #000000; /* Color for the part of the slider that has been filled */
+}
+
+.volume-control::-ms-fill-upper {
+    background: #ffffff; /* Color for the part of the slider that has not been filled */
+}
+
+
+.abovebar{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 1400px)
+ {
+    .left{
+        position: absolute;
+        left: -125%;
+        transition: left 0.3s ease;
+        z-index: 1;
+        width: 360px;
+        background-color: black;
+        padding: 0;
+        height: 100vh;
+        top: 0;
+
+    }
+    .left .close {
+        right: 31px;
+        position: absolute;
+        top: 23px;
+        width: 26px;
+    }
+    .right{
+          width: 100vw;
+    }
+    .playbar{
+        width: 98vw;
+    }
+    .hamburger{
+        display: block;
+    }
+    .cardContainer{
+        margin: 0;
+        justify-content: normal;
+        
+    }
+    .close{
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    .songtime {
+        font-size: 0.9rem; /* Slightly reduce font-size on smaller screens */
+        right: 10px; /* Adjust positioning */
+        bottom: 5px; /* Adjust positioning */
+    }
+}
+
+@media (max-width: 768px) {
+    .songtime {
+        font-size: 0.8rem; /* Further reduce font-size for smaller devices */
+        right: 5px; /* Adjust positioning */
+        bottom: 5px; /* Adjust positioning */
+    }
+}
+
+@media (max-width: 480px) {
+    .songtime {
+        font-size: 0.7rem; /* Further reduce font-size for mobile devices */
+        right: 3px; /* Adjust positioning */
+        bottom: 5px; /* Adjust positioning */
+    }
+}
+ @media(max-width: 500px){
+    .card{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .header>*{
+        padding: 2px;
+    }
+    .buttons>*{
+        margin: 0 6px;
+    }
+    .cardContainer{
+        max-height: unset;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+    .spotifyPlaylists h1{
+        padding: 4px;
+    }
+    .library{
+        height: 85vh;
+    }
+    .left{
+        width: 100vw;
+    }
+    .header{
+        padding: 7px;
+    }
+
+ }
+
